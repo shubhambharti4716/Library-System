@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+}
+nav {
+  display: flex;
+  background: linear-gradient(90deg, black, rgb(119, 6, 108));
+  color: white;
+  justify-content: space-between;
+  padding: 15px 30px; /*vertical horizontal*/
+  position: sticky; /*fix the navbar on top*/
+  top: 0px;
+  z-index: 1; /*giving nav higher priority*/
+}
+nav a,
+nav div a {
+  color: white;
+  text-decoration: none;
+  margin-inline: 10px; /*margin left + margin right*/
+}
+#books,
+#register {
+  display: flex;
+  justify-content: center;
+}
+#books-div,
+#register-div {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px darkgray;
+  margin-top: 30px;
+  background-color: white;
+  overflow-x:auto;
+}
+#books-heading,
+#register-div > h3 {
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+table,
+th,
+td {
+  border: 2px solid #ececec;
+  border-collapse: collapse;
+  color: #2c2c2c;
+  
+}
+td,
+th {
+  padding: 10px;
+}
+td a {
+  color: #220fbc;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+#books-div {
+  width: 100%;
+  max-width: 874px;
+}
+#register-div {
+  width: 100%;
+  max-width: 874px;
+  margin-bottom: 20px;
+}
+label {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+.submit {
+  border: none;
+  margin-top: 15px;
+  font-size: 20px;
+  background-color: black;
+  letter-spacing: 2px;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 5s linear;
+}
+.submit:hover {
+  background: linear-gradient(90deg, black, #3c0337);
+  transition: background 5s linear;
+}
+input {
+  border: 2px solid #ececec;
+  padding: 5px;
+}
+footer {
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  padding: 5px 0;
+  cursor: pointer;
+}
+footer:hover {
+  background: linear-gradient(90deg, black, #3c0337);
+  transition: background 5s linear;
+}
+@media (max-width: 768px) {
+  /* for tablets */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+    margin-bottom: 10px;
+  }
+  nav div a {
+    margin: 5px 20px;
+  }
+
+  #books-div,
+  #register-div {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* for mobile */
+  nav {
+    padding: 10px 20px;
+  }
+  nav div a {
+    margin: 5px 5px;
+  }
+
+  #books-div,
+  #register-div {
+    width: 93%;
+    overflow-x:scroll;
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library System</title>
+    <meta name="author" content="Shubham Bharti" />
+    <meta name="description" content="Library System" />
+    <link rel="icon" type="Image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Library System</a>
+      <div>
+        <a href="#books">Books</a>
+        <a href="#register">Register</a>
+        <a href="#" onclick="showcontactusmessage();">Contact Us</a>
+        <a href="#" onclick="showLogoutMessage();">Logout</a>
+      </div>
+    </nav>
+    <!-- Books -->
+    <section id="books">
+      <div id="books-div">
+        <h3 id="books-heading">Books</h3>
+        <table>
+          <tr>
+            <th>Book Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Availability</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <a
+                href="https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities"
+                target="_blank"
+                >A Tale Of Two Cities</a
+              >
+              <table>
+                <tr>
+                  <td>Publication Date: 1859</td>
+                </tr>
+                <tr>
+                  <td>Page Count: 350</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 978-0123456789</td>
+                </tr>
+              </table>
+            </td>
+            <td>Charles Dickens</td>
+            <td>Historical Fiction</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <a
+                href="https://en.wikipedia.org/wiki/The_Little_Prince"
+                target="_blank"
+                >The Little Prince</a
+              >
+              <table>
+                <tr>
+                  <td>Publication Date: 1943</td>
+                </tr>
+                <tr>
+                  <td>Page Count: 400</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 978-5432109876</td>
+                </tr>
+              </table>
+            </td>
+            <td>Antoine de Saint-Exupery</td>
+            <td>Children's</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <a
+                href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone"
+                target="_blank"
+                >Harry Potter and the Philosopher's Stone</a
+              >
+              <table>
+                <tr>
+                  <td>Publication Date: 1997</td>
+                </tr>
+                <tr>
+                  <td>Page Count: 280</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 978-1234567890</td>
+                </tr>
+              </table>
+            </td>
+            <td>J. K. Rowling</td>
+            <td>Fantasy</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <a
+                href="https://en.wikipedia.org/wiki/The_Da_Vinci_Code"
+                target="_blank"
+                >The Da Vinci Code</a
+              >
+              <table>
+                <tr>
+                  <td>Publication Date: 2003</td>
+                </tr>
+                <tr>
+                  <td>Page Count: 320</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 978-7654321098</td>
+                </tr>
+              </table>
+            </td>
+            <td>Dan Brown</td>
+            <td>Mystery thriller</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/War_and_Peace" target="_blank">War and Peace</a>
+              <table>
+                <tr>
+                  <td>Publication Date: 1869</td>
+                </tr>
+                <tr>
+                  <td>Page Count: 280</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 978-0123456789</td>
+                </tr>
+              </table>
+            </td>
+            <td>Charles Dickens</td>
+            <td>Historical Fiction</td>
+            <td>Available</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- Register -->
+    <section id="register">
+      <div id="register-div">
+        <h3>Register</h3>
+        <form>
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" placeholder="First Name" required />
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" placeholder="Last Name" required />
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" required />
+          <label for="age">Age:</label>
+          <input type="number" min="5" max="100" id="age" placeholder="Age" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="abc@gmail.com" required />
+          <label for="pass">Password:</label>
+          <input type="password" min="8" max="16" id="pass" placeholder="Password" required oninput="validatePasswordMatch()" />
+          <label for="cpass">Confirm Password:</label>
+          <input type="password" min="8" max="16" id="cpass" placeholder="Confirm Password" required oninput="validatePasswordMatch()" />
+          <p id="password-match-error" style="color: red"></p>
+          <button class="submit" onclick="validateAndSubmit()">Register</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+        <center>
+          <span>All rights reserved. Copyright © Shubham Bharti.</span>
+        </center>
+      </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
